@@ -1,0 +1,167 @@
+main {
+    font-family: $ff-prim;
+    font-weight: 300;
+    background-color: $bg-sec;
+    text-align: center;
+    color: $c-prim2;
+}
+
+.contact {
+    background-image: url(../img/contact\ us2.avif);
+    background-size: cover;
+    background-attachment: fixed;
+    @include flex (column,center,center);
+    gap: .5rem;
+    padding-bottom: .5rem;
+
+    &__title {
+        margin-top: 1rem;
+        background-color: #0000007b;
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
+
+    &__imge {
+        width: 90%;
+        height: 13rem;
+        overflow: hidden;
+        padding: 1rem;
+
+        @include tablet {
+            height: 20rem;
+        }
+
+        @include desktop {
+            height: 25rem;
+        }
+
+        &__imge img {
+            object-fit: cover;
+        }
+    }
+
+}
+
+.otherinfo {
+    padding: 1rem;
+    background-color: #0000003d;
+
+    @include tablet {
+        font-size: large;
+        font-weight: 400;
+    }
+
+    @include desktop {
+        @include flex (row,center,stretch);
+        gap: 1rem;
+    }
+}
+
+.quick-cont {
+    padding: 1rem;
+
+    &__imge {
+        height: 4rem;
+        overflow: hidden;
+    }
+
+    &__imge img {
+        height: 4rem;
+        object-fit: cover;
+        position: relative;
+    }
+
+    & p {
+        @include tablet {
+            font-size: large;
+            font-weight: 400;
+        }
+    }
+
+    &__info {
+        @include desktop {
+            @include flex (row,center,baseline);
+            gap: .5rem;
+        }
+
+        & p {
+            @include desktop {
+                font-size: x-large;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.contenido {
+    padding: 1rem;
+    font-size: medium;
+
+    @include tablet {
+        @include flex (row,space-around,center);
+    }
+
+    &__map {
+        display: none;
+
+        @include tablet {
+            display: inline-block;
+        }
+    }
+
+    &__form {
+        width: 300px;
+        padding: 1rem;
+        border-radius: 10px;
+        margin: auto;
+        background-color: $bg-form;
+
+        & label {
+            width: 4.5rem;
+            font-weight: 400;
+            display: inline-block;
+            color: $c-cuar;
+        }
+
+        & input[type="text"],
+        input[type="email"] {
+            width: 11.2rem;
+            padding: .2rem .8rem;
+            border: 1px solid #f6f6f6;
+            border-radius: 3px;
+            background-color: $bg-form-input;
+            margin: 8px 0;
+            display: inline-block;
+        }
+
+        & input[type="submit"],
+        [type="reset"] {
+            width: fit-content;
+            padding: .7rem 1.1rem;
+            margin-top: 2.6rem;
+            border: 1px solid #000;
+            border-radius: 5px;
+            display: block;
+            color: $c-prim;
+            background-color: $bg-prim;
+        }
+
+        &__form-btn {
+            @include flex (row,space-around,stretch);
+        }
+
+        &__news label {
+            width: 90%;
+        }
+
+        &__form textarea {
+            width: 100%;
+            height: 100px;
+            border: 1px solid $bg-form-input;
+            border-radius: 3px;
+            background-color: $bg-form-input;
+            margin: .7rem 0;
+            display: block;
+        }
+    }
+}

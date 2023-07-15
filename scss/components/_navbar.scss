@@ -1,0 +1,40 @@
+.navbar {
+    --bs-navbar-color: rgba(255, 209, 50);
+    --bs-navbar-hover-color: #e0e0df;
+    --bs-navbar-active-color: rgb(135, 135, 134);
+}
+
+.navbar-nav li {
+    font-size: 1.2rem;
+    @include desktop{
+        font-size: 1.5rem;
+    }
+}
+
+nav {
+    @include desktop {
+    width: 80%;
+    }
+}
+
+.btn-outline-success {
+    --bs-btn-color: rgba(255, 209, 0);
+    --bs-btn-border-color: rgba(255, 209, 0);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: rgba(255, 209, 0)4;
+    --bs-btn-hover-border-color: rgba(255, 209, 0);
+    --bs-btn-focus-shadow-rgb: 25, 135, 84;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: rgba(255, 209, 0);
+    --bs-btn-active-border-color: rgba(255, 209, 0);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: rgba(255, 209, 0);
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: rgba(255, 209, 0);
+    --bs-gradient: none;
+}
+
+.navbar-toggler {
+    color: $c-sec;
+    background-color: $bg-ter;
+}

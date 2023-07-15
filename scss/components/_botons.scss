@@ -1,0 +1,20 @@
+.btn {
+    font-family: $ff-prim;
+    font-weight: 700;
+    font-size: 1rem;
+    color: black;
+    border: groove;
+    border-color: $c-border;
+    background-color: $bg-btn;
+    padding: 0.2rem;
+
+    &:hover{
+        @include desktop{
+            font-size: 1.2rem;
+            background-color: $bg-prim;
+            color: $c-sec;
+            border-color: $c-border;
+            transition: all 0.3s;
+        }
+    }
+}

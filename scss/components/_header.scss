@@ -1,0 +1,54 @@
+header {
+    background-color: $bg-prim;
+    padding: 1rem;
+    color: $c-prim;
+    font-family: $ff-prim;
+    font-weight: 300;
+
+    & h1 {
+        text-align: justify;
+        font-size: 0.7rem;
+        font-weight: 300;
+        color: $c-ter;
+        padding-left: 2rem;
+        @include tablet{
+            padding-left: 7%;
+        }
+        @include desktop{
+            color:$bg-prim
+        }
+    }
+
+    & video {
+        width: 130vw;
+        height: 26rem;
+        position: absolute;
+        bottom: -6rem;
+        @include desktop{
+            position: static;
+            width: auto;
+            height: auto;
+        }
+    }
+}
+
+.header{
+    @include desktop{
+        max-height: 14rem;
+        @include flex (row,space-between,center);
+    }
+
+    &__logo {
+        position: relative;
+        height: 12.5rem;
+        @include flex (row,center,start);
+        overflow: hidden;
+        @include desktop{
+            width: 35%;
+            position: relative;
+            bottom: 6rem;
+            height: 20rem;
+            overflow: hidden;
+        }
+    }
+}

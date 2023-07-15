@@ -1,0 +1,152 @@
+footer {
+    background-color: $bg-prim;
+    padding: 1rem;
+    color: $c-prim;
+    font-family: $ff-prim;
+    font-weight: 300;
+
+    & form {
+        gap: 0.2rem;
+        padding: 1rem;
+        margin-left: 1rem;
+    }
+
+    & h6 {
+        text-align: end;
+        font-size: 0.4rem;
+        padding: .5rem;
+    }
+}
+
+.footer-compl {
+    @include desktop {
+            display: flex;
+            border-top: double;
+            padding-top: 0.5rem;
+            border-bottom: double;
+            padding-bottom: 0.5rem;
+            border-color: $c-border;
+    }
+
+    &__first {
+        @include tablet {
+            @include flex (row,space-around,center);
+        }
+        @include desktop{
+            width: 35%;
+            flex-direction: column;
+        }
+
+        &__up {
+            gap: 1rem;
+            @include flex (row,space-evenly,center);
+
+            @include desktop{
+                flex-direction: column;
+            }
+
+            &__logo {
+                height: 90px;
+                overflow: hidden;
+                
+                @include tablet{
+                    height: 150px;
+                    overflow: hidden;
+                }
+
+                & img {
+                    min-width: 200px;
+                    height: 260px;
+                    position: relative;
+                    bottom: 5rem;
+                    @include tablet{
+                        min-width: auto;
+                        height: 300px;
+                        bottom: 5rem;
+                    }
+                }
+            }
+
+            &__redes {
+                @include flex (row,space-around,stretch);
+                gap: 0.3rem;
+                margin-right: 1rem;
+
+                & img {
+                    width: 2rem;
+                }
+            }
+        }
+    }
+
+    &__down {
+        border-top: double;
+        padding-top: 0.5rem;
+        border-bottom: double;
+        border-color: $c-border;
+        text-align: center;
+        @include flex (row,space-around,center);
+        gap: 1rem;
+        padding-bottom: 1rem;
+
+        @include desktop{
+            border-top: none;
+            border-bottom: none;
+            width: 70%;
+            justify-content: space-between;
+            padding-right: 5%;
+        }
+
+        &__quick {
+            @include tablet{
+                width: 50%;
+                font-size: 1.5rem;
+            }
+
+            & h4 {
+                color: $c-sec;
+                text-decoration: underline;
+                font-weight: 700;
+                font-size: 1rem;
+                @include tablet{
+                    font-size: 1.2rem;
+                }
+            }
+
+            & ul {
+                color: $c-sec;
+                padding-right: 1rem;
+                padding-left: 1rem;
+
+                & :hover{
+                    @include desktop{
+                        color: $c-prim2;
+                    }
+                }
+            }
+        }
+
+        &__contact {
+            & h4 {
+                text-align: end;
+                font-size: 0.6rem;
+                @include tablet{
+                    text-align: center;
+                    font-size: 1rem;
+                }
+            }
+
+            &__map {
+                overflow: hidden;
+                width: 50vw;
+                max-width: 250px;
+                height: 8rem;
+                
+                @include tablet{
+                    max-width: 300px;
+                    height: 10rem;
+                }
+            }
+        }
+    }
+}

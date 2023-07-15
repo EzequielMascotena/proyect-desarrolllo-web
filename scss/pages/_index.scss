@@ -1,0 +1,104 @@
+.carousel-item img {
+    height: 20rem;
+
+    @include desktop {
+        height: 25rem;
+    }
+}
+
+.art1 {
+    padding: 1rem;
+    @include flex (column,center,center);
+    gap: 1rem;
+
+    @include tablet {
+        flex-direction: row;
+    }
+
+    &__imge {
+        @include flex (row,center,center);
+        width: 100%;
+        gap: 0.1rem;
+
+        @include tablet {
+            flex-direction: column;
+            width: 50%;
+            overflow: hidden;
+            gap: .5rem;
+        }
+
+        @include desktop {
+            flex-direction: row;
+            gap: 1rem;
+        }
+    }
+
+    &__imge img {
+        overflow: hidden;
+        max-height: 13rem;
+        object-fit: cover;
+
+        @include tablet {
+            width: 400px;
+        }
+
+        @include desktop {
+            height: 400px;
+            max-height: 400px;
+        }
+    }
+
+    &__parr {
+        @include tablet {
+            width: 50%;
+            font-size: large;
+        }
+    }
+}
+
+.art2 {
+    padding: 1rem;
+    @include flex (column,center,center);
+    gap: 1rem;
+
+    @include tablet {
+        flex-direction: row;
+    }
+
+    &__imge {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        justify-items: stretch;
+        align-items: stretch;
+        gap: 0.1rem;
+
+        @include tablet {
+            width: 50%;
+            order: 1;
+            gap: .5rem;
+        }
+    }
+
+    &__imge img {
+        max-height: 200px;
+        object-fit: cover;
+
+        @include desktop {
+            max-height: 300px;
+        }
+    }
+
+    &__parr {
+        @include tablet {
+            width: 50%;
+            font-size: large;
+        }
+    }
+}
+
+@include desktop {
+    main p {
+        font-size: x-large;
+    }
+}
