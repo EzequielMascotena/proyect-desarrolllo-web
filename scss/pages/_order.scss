@@ -1,0 +1,170 @@
+.title-order {
+    padding: 1rem;
+    background-image: url(../../img/bg\ order.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    @include flex (column, center, center);
+    gap: .5rem;
+    padding-bottom: .5rem;
+
+    & p {
+        padding: .3rem;
+        background-color: rgba(0, 0, 0, 0.702);
+
+        & a {
+            color: $c-sec;
+            font-weight: 700;
+
+            @include desktop {
+                &:hover {
+                    text-shadow: (0px -3px 5px $c-border);
+                    transition: 1s;
+                }
+            }
+        }
+    }
+}
+
+.explanation {
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.702);
+
+    & h3 {
+        text-shadow: (0px -3px 5px $c-border);
+    }
+}
+
+
+.order {
+    &__model {
+        padding: 1rem;
+        @include flex (column, space-around, center);
+        gap: .3rem;
+
+        @include tablet {
+            flex-direction: row;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        & label {
+            color: $c-sec;
+            font-size: x-large;
+            font-weight: 700;
+            text-shadow: (0px -3px 5px black);
+        }
+
+        & select {
+            width: 15rem;
+            height: 2rem;
+        }
+    }
+
+    &__color {
+        padding: 1rem;
+        @include flex (column, space-around, center);
+        gap: .3rem;
+        background-color: rgba(0, 0, 0, 0.702);
+
+        &__choose {
+            padding: 1rem;
+            @include flex (column, space-around, center);
+            gap: .3rem;
+
+            @include tablet {
+                flex-direction: row;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            & label {
+                color: $c-sec;
+                font-size: x-large;
+                font-weight: 700;
+                text-shadow: (0px -3px 5px black);
+            }
+
+            & select {
+                width: 15rem;
+                height: 2rem;
+            }
+        }
+    }
+
+    &__custom {
+        padding: 1rem;
+
+        & h4 {
+            color: $c-sec;
+            font-size: x-large;
+            font-weight: 700;
+            text-shadow: (0px -3px 5px black);
+        }
+
+        & h5 {
+            color: $c-prim;
+            font-size: x-large;
+            font-weight: 700;
+            padding-top: .5rem;
+            text-shadow: (0px -1px 5px black), (0px -3px 5px $c-border);
+        }
+
+        & label {
+            width: 15rem;
+            height: 2rem;
+
+            @include tablet {
+                width: 23rem;
+            }
+        }
+
+        &__gral {
+            @include desktop {
+                @include flex (row, space-around, center)
+            }
+
+            &__1 {
+                @include tablet {
+                    @include flex (row, space-around, center)
+                }
+            }
+
+            &__2 {
+                @include tablet {
+                    @include flex (row, space-around, center)
+                }
+
+                @include desktop {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+
+    &__cond {
+        padding: 1rem;
+        background-color: rgba(0, 0, 0, 0.702);
+
+        & h5 {
+            color: $c-sec;
+            font-size: x-large;
+            font-weight: 700;
+            text-shadow: (0px -3px 5px black);
+        }
+
+        & label {
+            padding: .5rem;
+            font-size: large;
+            font-weight: 700;
+            text-shadow: (0px -3px 5px black);
+        }
+    }
+
+    &__end {
+        padding: 1rem;
+
+        & input {
+            margin: .3rem;
+        }
+    }
+}

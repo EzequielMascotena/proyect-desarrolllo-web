@@ -8,9 +8,32 @@
     background-color: $bg-btn;
     padding: 0.2rem;
 
-    &:hover{
-        @include desktop{
+    &:hover {
+        @include desktop {
             font-size: 1.2rem;
+            background-color: $bg-prim;
+            color: $c-sec;
+            border-color: $c-border;
+            transition: all 0.3s;
+        }
+    }
+}
+
+
+.btnProd {
+    font-weight: 700;
+    font-size: 1rem;
+    color: black;
+    border: groove;
+    border-radius: 10px;
+    border-color: $c-border;
+    background-color: $bg-btn;
+    padding: 0.2rem;
+
+    &:hover {
+        @include desktop {
+            box-shadow: (1px 1px 15px 1px $c-border);
+            font-size: 1.1rem;
             background-color: $bg-prim;
             color: $c-sec;
             border-color: $c-border;

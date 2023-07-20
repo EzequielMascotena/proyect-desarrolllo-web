@@ -1,0 +1,124 @@
+.abouH {
+    padding-bottom: 1rem;
+    box-shadow: (0px -20px 20px 20px black );
+
+    &__titleAbout {
+        background-image: url(../../img/About\ Us/0.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        padding-bottom: .5rem;
+    }
+
+    & h3 {
+        margin-top: 1rem;
+        font-size: x-large;
+    }
+
+    &__history {
+        padding: .8rem;
+
+        &__1 {
+            & img {
+                height: 12rem;
+
+                @include desktop {
+                    height: 20rem;
+                }
+            }
+        }
+
+        &__2 {
+            & img {
+                height: 12rem;
+
+                @include desktop {
+                    height: 20rem;
+                }
+            }
+        }
+
+        @include tablet {
+            @include flex (row, stretch, stretch);
+            gap: .7rem;
+
+            &__1 {
+                width: 50%;
+            }
+
+            &__2 {
+                width: 50%;
+            }
+        }
+    }
+}
+
+
+
+.process {
+    padding: .7rem;
+    box-shadow: (0px -20px 20px 20px black );
+
+    &__title {
+        background-image: url(../../img/About\ Us/3.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        padding-bottom: .5rem;
+    }
+
+    & img {
+        width: 22rem;
+        padding-top: .5rem;
+    }
+
+    &__cont {
+        & a{
+            color:$c-sec;
+            font-weight: 700;
+            &:hover{
+                text-shadow: (0px 10px 5px black);
+                transition: 1s;
+            }
+        }
+
+        @include tablet {
+            margin-bottom: 1rem;
+            @include flex (row, center, center);
+            gap: .7rem;
+
+            &__1 {
+                width: 33%;
+            }
+
+            &__2 {
+                width: 33%;
+            }
+
+            &__3 {
+                width: 33%;
+            }
+        }
+    }
+}
+
+
+.about-end{
+    padding-bottom: 3rem;
+    @include tablet{
+        @include flex (row,space-around, center);
+        &__videotour iframe {
+            width: 400px;
+            height: 700px;
+        }
+    }
+    &__customer{
+        &__carr{
+            overflow: hidden;
+            width: 400px;
+            margin: auto;
+            & img{
+                object-fit: cover;
+                height: 700px;
+            }
+        }
+    }
+}

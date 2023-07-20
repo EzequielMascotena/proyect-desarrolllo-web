@@ -1,22 +1,13 @@
-main {
-    font-family: $ff-prim;
-    font-weight: 300;
-    background-color: $bg-sec;
-    text-align: center;
-    color: $c-prim2;
-}
-
 .contact {
     background-image: url(../img/contact\ us2.avif);
     background-size: cover;
     background-attachment: fixed;
-    @include flex (column,center,center);
+    @include flex (column, center, center);
     gap: .5rem;
     padding-bottom: .5rem;
 
-    &__title {
+    & h2 {
         margin-top: 1rem;
-        background-color: #0000007b;
         padding-left: .5rem;
         padding-right: .5rem;
     }
@@ -25,7 +16,6 @@ main {
         width: 90%;
         height: 13rem;
         overflow: hidden;
-        padding: 1rem;
 
         @include tablet {
             height: 20rem;
@@ -35,8 +25,18 @@ main {
             height: 25rem;
         }
 
-        &__imge img {
+        & img {
             object-fit: cover;
+            max-height: 525px;
+            max-width: 550px;
+
+            @include tablet {
+                max-width: 900px;
+            }
+
+            @include desktop {
+                max-width: 1300px;
+            }
         }
     }
 
@@ -52,20 +52,21 @@ main {
     }
 
     @include desktop {
-        @include flex (row,center,stretch);
+        @include flex (row, center, stretch);
         gap: 1rem;
     }
 }
 
 .quick-cont {
     padding: 1rem;
+    padding-bottom: 4rem;
 
     &__imge {
         height: 4rem;
         overflow: hidden;
     }
 
-    &__imge img {
+    & img {
         height: 4rem;
         object-fit: cover;
         position: relative;
@@ -80,7 +81,7 @@ main {
 
     &__info {
         @include desktop {
-            @include flex (row,center,baseline);
+            @include flex (row, center, baseline);
             gap: .5rem;
         }
 
@@ -95,10 +96,11 @@ main {
 
 .contenido {
     padding: 1rem;
+    padding-bottom: 3rem;
     font-size: medium;
 
     @include tablet {
-        @include flex (row,space-around,center);
+        @include flex (row, space-around, center);
     }
 
     &__map {
@@ -147,7 +149,7 @@ main {
         }
 
         &__form-btn {
-            @include flex (row,space-around,stretch);
+            @include flex (row, space-around, stretch);
         }
 
         &__news label {

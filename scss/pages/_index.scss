@@ -5,10 +5,13 @@
         height: 25rem;
     }
 }
+// main section{
+//     box-shadow: (0px -20px 20px 20px black );
+// }
 
 .art1 {
     padding: 1rem;
-    @include flex (column,center,center);
+    @include flex (column, center, center);
     gap: 1rem;
 
     @include tablet {
@@ -16,7 +19,7 @@
     }
 
     &__imge {
-        @include flex (row,center,center);
+        @include flex (row, center, center);
         width: 100%;
         gap: 0.1rem;
 
@@ -31,34 +34,39 @@
             flex-direction: row;
             gap: 1rem;
         }
+
+        & img {
+            overflow: hidden;
+            max-height: 13rem;
+            object-fit: cover;
+
+            @include tablet {
+                width: 400px;
+            }
+
+            @include desktop {
+                height: 400px;
+                max-height: 400px;
+            }
+        }
     }
 
-    &__imge img {
-        overflow: hidden;
-        max-height: 13rem;
-        object-fit: cover;
 
-        @include tablet {
-            width: 400px;
-        }
-
-        @include desktop {
-            height: 400px;
-            max-height: 400px;
-        }
-    }
 
     &__parr {
         @include tablet {
             width: 50%;
             font-size: large;
         }
+        & a {
+            margin-top: .7rem
+        } ;
     }
 }
 
 .art2 {
     padding: 1rem;
-    @include flex (column,center,center);
+    @include flex (column, center, center);
     gap: 1rem;
 
     @include tablet {
@@ -78,14 +86,14 @@
             order: 1;
             gap: .5rem;
         }
-    }
 
-    &__imge img {
-        max-height: 200px;
-        object-fit: cover;
+        & img {
+            max-height: 200px;
+            object-fit: cover;
 
-        @include desktop {
-            max-height: 300px;
+            @include desktop {
+                max-height: 300px;
+            }
         }
     }
 
@@ -94,6 +102,9 @@
             width: 50%;
             font-size: large;
         }
+        & a {
+            margin-top: .7rem
+        } ;
     }
 }
 
