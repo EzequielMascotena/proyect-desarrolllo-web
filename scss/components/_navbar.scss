@@ -6,14 +6,15 @@
 
 .navbar-nav li {
     font-size: 1.2rem;
-    @include desktop{
+
+    @include desktop {
         font-size: 1.5rem;
     }
 }
 
 nav {
     @include desktop {
-    width: 80%;
+        width: 80%;
     }
 }
 

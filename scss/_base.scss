@@ -21,20 +21,20 @@ $bg-form: #a2a1a1;
 $bg-form-input: #f6f6f6;
 
 @mixin flex ($direction, $justify, $aling) {
-display: flex;
-flex-direction: $direction;
-justify-content: $justify;
-align-items: $aling;
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $aling;
 }
 
 @mixin tablet {
-    @media (min-width:768px){
+    @media (min-width:768px) {
         @content;
     }
 }
 
 @mixin desktop {
-    @media (min-width:1200px){
+    @media (min-width:1200px) {
         @content;
     }
 }
@@ -71,18 +71,19 @@ body {
         max-width: 1350px;
         margin-right: auto;
         margin-left: auto;
-            box-shadow: (0px -20px 20px 20px black );
+        box-shadow: (0px -20px 20px 20px black);
     }
 }
 
 // CONTENEDOR texto dentro de imagen
 
-.imgContenedor{
+.imgContenedor {
     position: relative;
     display: inline-block;
     text-align: center;
 }
-.textoIn{
+
+.textoIn {
     background-color: #00000098;
     position: absolute;
     top: 50%;

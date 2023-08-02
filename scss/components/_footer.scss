@@ -20,36 +20,37 @@ footer {
 
 .footer-compl {
     @include desktop {
-            display: flex;
-            border-top: double;
-            padding-top: 0.5rem;
-            border-bottom: double;
-            padding-bottom: 0.5rem;
-            border-color: $c-border;
+        display: flex;
+        border-top: double;
+        padding-top: 0.5rem;
+        border-bottom: double;
+        padding-bottom: 0.5rem;
+        border-color: $c-border;
     }
 
     &__first {
         @include tablet {
-            @include flex (row,space-around,center);
+            @include flex (row, space-around, center);
         }
-        @include desktop{
+
+        @include desktop {
             width: 35%;
             flex-direction: column;
         }
 
         &__up {
             gap: 1rem;
-            @include flex (row,space-evenly,center);
+            @include flex (row, space-evenly, center);
 
-            @include desktop{
+            @include desktop {
                 flex-direction: column;
             }
 
             &__logo {
                 height: 90px;
                 overflow: hidden;
-                
-                @include tablet{
+
+                @include tablet {
                     height: 150px;
                     overflow: hidden;
                 }
@@ -59,7 +60,8 @@ footer {
                     height: 260px;
                     position: relative;
                     bottom: 5rem;
-                    @include tablet{
+
+                    @include tablet {
                         min-width: auto;
                         height: 300px;
                         bottom: 5rem;
@@ -68,7 +70,7 @@ footer {
             }
 
             &__redes {
-                @include flex (row,space-around,stretch);
+                @include flex (row, space-around, stretch);
                 gap: 0.3rem;
                 margin-right: 1rem;
 
@@ -85,11 +87,11 @@ footer {
         border-bottom: double;
         border-color: $c-border;
         text-align: center;
-        @include flex (row,space-around,center);
+        @include flex (row, space-around, center);
         gap: 1rem;
         padding-bottom: 1rem;
 
-        @include desktop{
+        @include desktop {
             border-top: none;
             border-bottom: none;
             width: 70%;
@@ -98,7 +100,7 @@ footer {
         }
 
         &__quick {
-            @include tablet{
+            @include tablet {
                 width: 50%;
                 font-size: 1.5rem;
             }
@@ -108,7 +110,8 @@ footer {
                 text-decoration: underline;
                 font-weight: 700;
                 font-size: 1rem;
-                @include tablet{
+
+                @include tablet {
                     font-size: 1.2rem;
                 }
             }
@@ -118,8 +121,8 @@ footer {
                 padding-right: 1rem;
                 padding-left: 1rem;
 
-                & :hover{
-                    @include desktop{
+                & :hover {
+                    @include desktop {
                         color: $c-prim2;
                     }
                 }
@@ -130,7 +133,8 @@ footer {
             & h4 {
                 text-align: end;
                 font-size: 0.6rem;
-                @include tablet{
+
+                @include tablet {
                     text-align: center;
                     font-size: 1rem;
                 }
@@ -141,8 +145,8 @@ footer {
                 width: 50vw;
                 max-width: 250px;
                 height: 8rem;
-                
-                @include tablet{
+
+                @include tablet {
                     max-width: 300px;
                     height: 10rem;
                 }

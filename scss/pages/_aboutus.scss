@@ -1,9 +1,9 @@
-.abouH {
+.abou-h {
     padding-bottom: 1rem;
-    box-shadow: (0px -20px 20px 20px black );
+    box-shadow: (0px -20px 20px 20px black);
 
-    &__titleAbout {
-        background-image: url(../../img/About\ Us/0.jpg);
+    &__title-about {
+        background-image: url(../../img/AboutUs/0.jpg);
         background-size: cover;
         background-attachment: fixed;
         padding-bottom: .5rem;
@@ -56,10 +56,10 @@
 
 .process {
     padding: .7rem;
-    box-shadow: (0px -20px 20px 20px black );
+    box-shadow: (0px -20px 20px 20px black);
 
     &__title {
-        background-image: url(../../img/About\ Us/3.jpg);
+        background-image: url(../../img/AboutUs/3.jpg);
         background-size: cover;
         background-attachment: fixed;
         padding-bottom: .5rem;
@@ -71,10 +71,11 @@
     }
 
     &__cont {
-        & a{
-            color:$c-sec;
+        & a {
+            color: $c-sec;
             font-weight: 700;
-            &:hover{
+
+            &:hover {
                 text-shadow: (0px 10px 5px black);
                 transition: 1s;
             }
@@ -87,38 +88,50 @@
 
             &__1 {
                 width: 33%;
-            }
-
-            &__2 {
-                width: 33%;
-            }
-
-            &__3 {
-                width: 33%;
+                padding: 1rem;
             }
         }
     }
 }
 
 
-.about-end{
+.about-end {
     padding-bottom: 3rem;
-    @include tablet{
-        @include flex (row,space-around, center);
-        &__videotour iframe {
-            width: 400px;
+
+    &__videotour iframe {
+        width: 320px;
+
+        @include tablet {
+            padding: 1rem;
+            width: 380px;
             height: 700px;
         }
     }
-    &__customer{
-        &__carr{
-            overflow: hidden;
-            width: 400px;
+
+    &__customer {
+        &__carr {
+            width: 320px;
             margin: auto;
-            & img{
+
+            @include tablet {
+                padding: 1rem;
+                overflow: hidden;
+                width: 380px;
+            }
+
+
+            & img {
                 object-fit: cover;
-                height: 700px;
+                height: 400px;
+
+                @include tablet {
+                    height: 670px;
+                }
             }
         }
+    }
+
+    @include tablet {
+        @include flex (row, space-around, center);
     }
 }
