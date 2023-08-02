@@ -793,7 +793,7 @@ article {
   box-shadow: 0px -20px 20px 20px black;
 }
 .abou-h__title-about {
-  background-image: url(../img/AboutUs/0.jpg);
+  background-image: url(../img/aboutus/0.jpg);
   background-size: cover;
   background-attachment: fixed;
   padding-bottom: 0.5rem;
@@ -842,7 +842,7 @@ article {
   box-shadow: 0px -20px 20px 20px black;
 }
 .process__title {
-  background-image: url(../img/AboutUs/3.jpg);
+  background-image: url(../img/aboutus/3.jpg);
   background-size: cover;
   background-attachment: fixed;
   padding-bottom: 0.5rem;
